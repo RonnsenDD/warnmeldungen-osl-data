@@ -1,0 +1,41 @@
+
+name: Warnmeldungen und Hochwasser aktualisieren
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: warnmeldungen-osl-data
+  cancel-in-progress: false
+
+jobs:
+  update-feeds:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Node.js einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Daten abrufen
+        run: node update-warnings.js
+
+      - name: Datenstände speichern
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add warnungen.json hochwasser.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Warn- und Hochwasserdaten aktualisieren"
+            git push
+          else
+            echo "Keine Änderungen an den Daten."
+          fi

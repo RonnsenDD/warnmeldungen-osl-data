@@ -1,6 +1,7 @@
 {
-  "status": "ok",
-  "fetchedAt": "2026-10-17T16:23:41.115Z",
+  "status": "error",
+  "fetchedAt": "2026-10-17T18:43:33.943Z",
   "lastSuccessfulAt": "2026-10-17T16:23:41.115Z",
-  "items": []
+  "items": [],
+  "error": "fetch failed"
 }

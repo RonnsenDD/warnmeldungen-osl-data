@@ -1,12 +1,12 @@
 {
   "status": "ok",
-  "fetchedAt": "2026-10-18T09:57:27.077Z",
-  "lastSuccessfulAt": "2026-10-18T09:57:27.077Z",
+  "fetchedAt": "2026-10-18T13:55:05.231Z",
+  "lastSuccessfulAt": "2026-10-18T13:55:05.231Z",
   "items": [
     {
-      "id": "lhp.LHP.SH.sh31792273859",
+      "id": "lhp.LHP.SH.sh31792322450",
       "version": 21,
-      "startDate": "2026-10-17T23:50:00+02:00",
+      "startDate": "2026-10-18T13:20:00+02:00",
       "severity": "Moderate",
       "urgency": "Immediate",
       "type": "Update",

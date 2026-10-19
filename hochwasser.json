@@ -1,18 +1,6 @@
 {
   "status": "ok",
-  "fetchedAt": "2026-10-19T07:13:48.421Z",
-  "lastSuccessfulAt": "2026-10-19T07:13:48.421Z",
-  "items": [
-    {
-      "id": "lhp.LHP.SH.sh31792322450",
-      "version": 21,
-      "startDate": "2026-10-18T13:20:00+02:00",
-      "severity": "Moderate",
-      "urgency": "Immediate",
-      "type": "Update",
-      "i18nTitle": {
-        "de": "Schleswig-Holstein Hochwasser-Sturmflut-Information"
-      }
-    }
-  ]
+  "fetchedAt": "2026-10-19T14:45:31.006Z",
+  "lastSuccessfulAt": "2026-10-19T14:45:31.006Z",
+  "items": []
 }

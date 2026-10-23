@@ -1,0 +1,13 @@
+name = "warnmeldungen-osl-scheduler"
+main = "cloudflare/worker.mjs"
+compatibility_date = "2026-10-23"
+workers_dev = false
+
+[triggers]
+crons = ["*/5 * * * *"]
+
+[vars]
+GITHUB_REPOSITORY = "RonnsenDD/warnmeldungen-osl-data"
+GITHUB_WORKFLOW = "update-warnings.yml"
+GITHUB_REF = "main"
+FRESHNESS_MINUTES = "15"

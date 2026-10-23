@@ -190,7 +190,7 @@ async function logFeedFreshness(env, fetcher, nowMs, freshnessMs, log) {
       lastSuccessfulAt: result.lastSuccessfulAt,
       publishedAt: result.publishedAt,
     };
-    if (result.status === 'stale' || result.status === 'unreachable' || result.status === 'invalid' || result.status === 'error') {
+    if (result.status !== 'ok') {
       log.error(JSON.stringify(fields));
     } else {
       log.log(JSON.stringify(fields));
@@ -209,7 +209,7 @@ export async function runScheduled({ env, fetcher = fetch, now = () => new Date(
 
   log.log(JSON.stringify({ event: 'scheduled_run', scheduledAt: nowDate.toISOString() }));
   const freshness = await logFeedFreshness(env, fetcher, nowMs, freshnessMs, log);
-  if (freshness.some(item => item.status === 'stale' || item.status === 'unreachable' || item.status === 'invalid' || item.status === 'error')) {
+  if (freshness.some(item => item.status !== 'ok')) {
     log.error(JSON.stringify({ event: 'monitor_threshold_exceeded', thresholdMinutes: freshnessMs / 60000 }));
   }
 

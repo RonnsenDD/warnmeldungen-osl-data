@@ -131,6 +131,22 @@ test('sanitizes GitHub errors and does not expose a secret or response body', as
   assert(!logs.join('\n').includes(installationToken));
 });
 
+
+test('treats unknown and partial feed statuses as not fully fresh', async () => {
+  const fetcher = mockGitHub(async url => {
+    if (url.includes('warnungen.json')) return response(200, { ...fresh, status: 'partial' });
+    if (url.includes('hochwasser.json')) return response(200, fresh);
+    if (url.includes('?status=in_progress')) return response(200, { workflow_runs: [] });
+    if (url.includes('?status=queued')) return response(200, { workflow_runs: [] });
+    if (url.endsWith('/dispatches')) return response(204, '');
+    throw new Error('unexpected request');
+  });
+  const logs = [];
+  const result = await runScheduled({ env, fetcher, now: () => new Date('2026-10-23T08:00:05.000Z'), log: { log: x => logs.push(x), error: x => logs.push(x) } });
+  assert.equal(result.freshness[0].status, 'partial');
+  assert(logs.some(line => line.includes('monitor_threshold_exceeded')));
+});
+
 test('rejects wrong repository and workflow configuration', async () => {
   await assert.rejects(runScheduled({ env: { ...env, GITHUB_REPOSITORY: 'other/repo' } }), /configuration/);
 });

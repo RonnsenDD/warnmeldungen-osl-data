@@ -11,3 +11,7 @@ GITHUB_REPOSITORY = "RonnsenDD/warnmeldungen-osl-data"
 GITHUB_WORKFLOW = "update-warnings.yml"
 GITHUB_REF = "main"
 FRESHNESS_MINUTES = "15"
+# Set the real numeric app and installation IDs only after account setup.
+# GITHUB_APP_ID = "..."
+# GITHUB_INSTALLATION_ID = "..."
+# GITHUB_APP_PRIVATE_KEY must be stored as a Cloudflare Secret, never here.

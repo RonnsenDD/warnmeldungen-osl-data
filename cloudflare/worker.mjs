@@ -37,7 +37,10 @@ function parseFeedSummary(text, nowMs, freshnessMs) {
 }
 
 function validateEnvironment(env) {
-  if (!env || typeof env.GITHUB_TOKEN !== 'string' || env.GITHUB_TOKEN.length < 20) {
+  if (!env || !/^\d+$/.test(String(env.GITHUB_APP_ID || '')) ||
+      !/^\d+$/.test(String(env.GITHUB_INSTALLATION_ID || '')) ||
+      typeof env.GITHUB_APP_PRIVATE_KEY !== 'string' ||
+      !env.GITHUB_APP_PRIVATE_KEY.includes('PRIVATE KEY')) {
     throw new Error('configuration');
   }
   if (env.GITHUB_REPOSITORY !== 'RonnsenDD/warnmeldungen-osl-data') {
@@ -46,6 +49,87 @@ function validateEnvironment(env) {
   if (env.GITHUB_WORKFLOW !== 'update-warnings.yml' || env.GITHUB_REF !== 'main') {
     throw new Error('configuration');
   }
+}
+
+function concatBytes(...parts) {
+  const output = new Uint8Array(parts.reduce((total, part) => total + part.length, 0));
+  let offset = 0;
+  for (const part of parts) {
+    output.set(part, offset);
+    offset += part.length;
+  }
+  return output;
+}
+
+function derLength(length) {
+  if (length < 128) return Uint8Array.of(length);
+  const bytes = [];
+  for (let rest = length; rest > 0; rest >>>= 8) bytes.unshift(rest & 0xff);
+  return Uint8Array.of(0x80 | bytes.length, ...bytes);
+}
+
+function derElement(tag, content) {
+  return concatBytes(Uint8Array.of(tag), derLength(content.length), content);
+}
+
+function privateKeyDer(pem) {
+  const match = pem.match(/-----BEGIN (RSA )?PRIVATE KEY-----([\s\S]+?)-----END (RSA )?PRIVATE KEY-----/);
+  if (!match || match[1] !== match[3]) throw new Error('configuration');
+  const binary = atob(match[2].replace(/\s/g, ''));
+  const raw = Uint8Array.from(binary, char => char.charCodeAt(0));
+  if (!match[1]) return raw;
+  const algorithm = Uint8Array.of(0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48, 0x86, 0xf7, 0x0d, 0x01, 0x01, 0x01, 0x05, 0x00);
+  const version = Uint8Array.of(0x02, 0x01, 0x00);
+  return derElement(0x30, concatBytes(version, algorithm, derElement(0x04, raw)));
+}
+
+function base64Url(bytes) {
+  let binary = '';
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return btoa(binary).replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
+}
+
+async function createInstallationToken(env, fetcher, nowMs) {
+  const key = await crypto.subtle.importKey(
+    'pkcs8',
+    privateKeyDer(env.GITHUB_APP_PRIVATE_KEY),
+    { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' },
+    false,
+    ['sign'],
+  );
+  const issuedAt = Math.floor(nowMs / 1000) - 60;
+  const header = base64Url(new TextEncoder().encode(JSON.stringify({ alg: 'RS256', typ: 'JWT' })));
+  const payload = base64Url(new TextEncoder().encode(JSON.stringify({
+    iat: issuedAt,
+    exp: issuedAt + 8 * 60,
+    iss: String(env.GITHUB_APP_ID),
+  })));
+  const unsigned = `${header}.${payload}`;
+  const signature = new Uint8Array(await crypto.subtle.sign(
+    { name: 'RSASSA-PKCS1-v1_5' },
+    key,
+    new TextEncoder().encode(unsigned),
+  ));
+  const jwt = `${unsigned}.${base64Url(signature)}`;
+  const response = await fetcher(
+    `https://api.github.com/app/installations/${env.GITHUB_INSTALLATION_ID}/access_tokens`,
+    {
+      method: 'POST',
+      headers: {
+        Accept: 'application/vnd.github+json',
+        Authorization: `Bearer ${jwt}`,
+        'X-GitHub-Api-Version': API_VERSION,
+        'User-Agent': USER_AGENT,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ permissions: { actions: 'write' } }),
+      signal: AbortSignal.timeout(12000),
+    },
+  );
+  if (response.status !== 201) throw new Error('github_app_auth');
+  const body = await response.json();
+  if (typeof body?.token !== 'string' || body.token.length < 20) throw new Error('github_app_auth');
+  return body.token;
 }
 
 async function githubRequest(url, token, init, fetcher) {
@@ -63,10 +147,10 @@ async function githubRequest(url, token, init, fetcher) {
   return response;
 }
 
-async function hasActiveRun(env, fetcher) {
+async function hasActiveRun(env, token, fetcher) {
   const base = `https://api.github.com/repos/${env.GITHUB_REPOSITORY}/actions/workflows/${env.GITHUB_WORKFLOW}/runs`;
   for (const status of ['in_progress', 'queued']) {
-    const response = await githubRequest(`${base}?status=${status}&per_page=1`, env.GITHUB_TOKEN, { method: 'GET' }, fetcher);
+    const response = await githubRequest(`${base}?status=${status}&per_page=1`, token, { method: 'GET' }, fetcher);
     if (!response.ok) throw new Error('github_api');
     const body = await response.json();
     if (!body || !Array.isArray(body.workflow_runs)) throw new Error('github_response');
@@ -129,13 +213,14 @@ export async function runScheduled({ env, fetcher = fetch, now = () => new Date(
     log.error(JSON.stringify({ event: 'monitor_threshold_exceeded', thresholdMinutes: freshnessMs / 60000 }));
   }
 
-  if (await hasActiveRun(env, fetcher)) {
+  const token = await createInstallationToken(env, fetcher, nowMs);
+  if (await hasActiveRun(env, token, fetcher)) {
     log.log(JSON.stringify({ event: 'dispatch_skipped', reason: 'workflow_active', at: nowDate.toISOString() }));
     return { dispatched: false, reason: 'workflow_active', freshness };
   }
 
   const dispatchUrl = `https://api.github.com/repos/${env.GITHUB_REPOSITORY}/actions/workflows/${env.GITHUB_WORKFLOW}/dispatches`;
-  const response = await githubRequest(dispatchUrl, env.GITHUB_TOKEN, {
+  const response = await githubRequest(dispatchUrl, token, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ ref: env.GITHUB_REF }),

@@ -1,4 +1,3 @@
-
 name: Warnmeldungen und Hochwasser aktualisieren
 
 on:
@@ -25,10 +24,16 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Feed-Regressionstests
+        run: node --test tests/*.test.js
+
       - name: Daten abrufen
+        id: fetch
+        continue-on-error: true
         run: node update-warnings.js
 
       - name: Datenstände speichern
+        if: always() && steps.fetch.outcome != 'skipped'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -39,3 +44,9 @@ jobs:
           else
             echo "Keine Änderungen an den Daten."
           fi
+
+      - name: Fehlgeschlagene Quellenabrufe melden
+        if: always() && steps.fetch.outcome == 'failure'
+        run: |
+          echo "Mindestens ein Warnfeed konnte nicht zuverlässig geprüft werden."
+          exit 1

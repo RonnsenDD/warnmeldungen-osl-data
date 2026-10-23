@@ -13,20 +13,27 @@ function parseFeedSummary(text, nowMs, freshnessMs) {
   try {
     feed = JSON.parse(text);
   } catch {
-    return { status: 'invalid', itemCount: null, ageMs: null };
+    return { status: 'invalid', itemCount: null, ageMs: null, lastAttemptAt: null, lastSuccessfulAt: null, publishedAt: null };
   }
   if (!feed || typeof feed !== 'object' || Array.isArray(feed)) {
-    return { status: 'invalid', itemCount: null, ageMs: null };
+    return { status: 'invalid', itemCount: null, ageMs: null, lastAttemptAt: null, lastSuccessfulAt: null, publishedAt: null };
   }
   if (!Array.isArray(feed.items)) {
-    return { status: 'invalid', itemCount: null, ageMs: null };
+    return { status: 'invalid', itemCount: null, ageMs: null, lastAttemptAt: null, lastSuccessfulAt: null, publishedAt: null };
   }
   const successMs = safeTimestamp(feed.lastSuccessfulAt);
+  const attemptMs = safeTimestamp(feed.lastAttemptAt);
+  const publishedMs = safeTimestamp(feed.fetchedAt);
+  const timestamps = {
+    lastAttemptAt: attemptMs === null ? null : new Date(attemptMs).toISOString(),
+    lastSuccessfulAt: successMs === null ? null : new Date(successMs).toISOString(),
+    publishedAt: publishedMs === null ? null : new Date(publishedMs).toISOString(),
+  };
   if (feed.status !== 'ok' || successMs === null) {
-    return { status: typeof feed.status === 'string' ? feed.status : 'invalid', itemCount: feed.items.length, ageMs: null };
+    return { status: typeof feed.status === 'string' ? feed.status : 'invalid', itemCount: feed.items.length, ageMs: null, ...timestamps };
   }
   const ageMs = Math.max(0, nowMs - successMs);
-  return { status: ageMs > freshnessMs ? 'stale' : 'ok', itemCount: feed.items.length, ageMs };
+  return { status: ageMs > freshnessMs ? 'stale' : 'ok', itemCount: feed.items.length, ageMs, ...timestamps };
 }
 
 function validateEnvironment(env) {
@@ -95,6 +102,9 @@ async function logFeedFreshness(env, fetcher, nowMs, freshnessMs, log) {
       status: result.status,
       itemCount: result.itemCount,
       ageMinutes: minutes,
+      lastAttemptAt: result.lastAttemptAt,
+      lastSuccessfulAt: result.lastSuccessfulAt,
+      publishedAt: result.publishedAt,
     };
     if (result.status === 'stale' || result.status === 'unreachable' || result.status === 'invalid' || result.status === 'error') {
       log.error(JSON.stringify(fields));
@@ -113,6 +123,7 @@ export async function runScheduled({ env, fetcher = fetch, now = () => new Date(
   const freshnessMs = Number(env.FRESHNESS_MINUTES || 15) * 60 * 1000;
   if (!Number.isFinite(freshnessMs) || freshnessMs <= 0) throw new Error('configuration');
 
+  log.log(JSON.stringify({ event: 'scheduled_run', scheduledAt: nowDate.toISOString() }));
   const freshness = await logFeedFreshness(env, fetcher, nowMs, freshnessMs, log);
   if (freshness.some(item => item.status === 'stale' || item.status === 'unreachable' || item.status === 'invalid' || item.status === 'error')) {
     log.error(JSON.stringify({ event: 'monitor_threshold_exceeded', thresholdMinutes: freshnessMs / 60000 }));

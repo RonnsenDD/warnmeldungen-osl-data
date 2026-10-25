@@ -1,20 +1,9 @@
 {
   "status": "ok",
-  "fetchedAt": "2026-10-25T09:41:23.258Z",
-  "lastAttemptAt": "2026-10-25T09:41:23.151Z",
-  "lastSuccessfulAt": "2026-10-25T09:41:23.258Z",
+  "fetchedAt": "2026-10-25T13:57:02.183Z",
+  "lastAttemptAt": "2026-10-25T13:57:02.045Z",
+  "lastSuccessfulAt": "2026-10-25T13:57:02.183Z",
   "items": [
-    {
-      "id": "lhp.LHP.HE.289300",
-      "version": 21,
-      "startDate": "2026-10-25T03:57:00+01:00",
-      "severity": "Moderate",
-      "urgency": "Immediate",
-      "type": "Alert",
-      "i18nTitle": {
-        "de": "Warnung vor Hochwasser"
-      }
-    },
     {
       "id": "lhp.LHP.SH.sh11792913739",
       "version": 21,
@@ -46,6 +35,17 @@
       "type": "Alert",
       "i18nTitle": {
         "de": "Warnung vor einer Sturmflut"
+      }
+    },
+    {
+      "id": "lhp.LHP.HE.892993",
+      "version": 21,
+      "startDate": "2026-10-25T13:27:00+01:00",
+      "severity": "Moderate",
+      "urgency": "Immediate",
+      "type": "Alert",
+      "i18nTitle": {
+        "de": "Warnung vor Hochwasser"
       }
     }
   ]

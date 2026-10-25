@@ -1,8 +1,8 @@
 {
   "status": "ok",
-  "fetchedAt": "2026-10-25T17:34:41.843Z",
-  "lastAttemptAt": "2026-10-25T17:34:41.675Z",
-  "lastSuccessfulAt": "2026-10-25T17:34:41.843Z",
+  "fetchedAt": "2026-10-25T19:56:38.991Z",
+  "lastAttemptAt": "2026-10-25T19:56:38.897Z",
+  "lastSuccessfulAt": "2026-10-25T19:56:38.991Z",
   "items": [
     {
       "id": "lhp.LHP.SH.sh11792913739",
@@ -16,17 +16,6 @@
       }
     },
     {
-      "id": "lhp.LHP.NI.ni_NI_21549",
-      "version": 21,
-      "startDate": "2026-10-25T08:48:00+01:00",
-      "severity": "Moderate",
-      "urgency": "Immediate",
-      "type": "Alert",
-      "i18nTitle": {
-        "de": "Sturmflutwarnung für die niedersächsische Nordseeküste"
-      }
-    },
-    {
       "id": "lhp.LHP.HB.HB_25.10.2026_09.30",
       "version": 21,
       "startDate": "2026-10-25T09:30:00+01:00",
@@ -35,6 +24,17 @@
       "type": "Alert",
       "i18nTitle": {
         "de": "Warnung vor einer Sturmflut"
+      }
+    },
+    {
+      "id": "lhp.LHP.NI.ni_NI_21552",
+      "version": 21,
+      "startDate": "2026-10-25T20:16:00+01:00",
+      "severity": "Moderate",
+      "urgency": "Immediate",
+      "type": "Update",
+      "i18nTitle": {
+        "de": "Sturmflutwarnung für die niedersächsische Nordseeküste"
       }
     }
   ]

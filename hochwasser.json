@@ -1,35 +1,24 @@
 {
-  "status": "error",
-  "fetchedAt": "2026-10-26T17:30:16.413Z",
-  "lastAttemptAt": "2026-10-26T17:30:16.413Z",
-  "lastSuccessfulAt": "2026-10-26T05:19:59.984Z",
+  "status": "ok",
+  "fetchedAt": "2026-10-26T21:50:04.862Z",
+  "lastAttemptAt": "2026-10-26T21:50:04.754Z",
+  "lastSuccessfulAt": "2026-10-26T21:50:04.862Z",
   "items": [
     {
-      "id": "lhp.LHP.HB.HB_25.10.2026_09.30",
+      "id": "lhp.LHP.ST.cate476896af9b6f138b2e5a53d2f4bdfc6",
       "version": 21,
-      "startDate": "2026-10-25T09:30:00+01:00",
-      "severity": "Moderate",
-      "urgency": "Immediate",
+      "startDate": "2026-10-26T12:57:00+01:00",
+      "severity": "Unknown",
+      "urgency": "Future",
       "type": "Alert",
       "i18nTitle": {
-        "de": "Warnung vor einer Sturmflut"
+        "de": "Hochwasser Vorwarnung"
       }
     },
     {
-      "id": "lhp.LHP.NI.ni_NI_21552",
+      "id": "lhp.LHP.SH.sh11793031650",
       "version": 21,
-      "startDate": "2026-10-25T20:16:00+01:00",
-      "severity": "Moderate",
-      "urgency": "Immediate",
-      "type": "Update",
-      "i18nTitle": {
-        "de": "Sturmflutwarnung für die niedersächsische Nordseeküste"
-      }
-    },
-    {
-      "id": "lhp.LHP.SH.sh11792962340",
-      "version": 21,
-      "startDate": "2026-10-25T22:05:00+01:00",
+      "startDate": "2026-10-26T17:20:00+01:00",
       "severity": "Moderate",
       "urgency": "Immediate",
       "type": "Update",
@@ -37,6 +26,5 @@
         "de": "Schleswig-Holstein Hochwasser-Sturmflut-Information"
       }
     }
-  ],
-  "error": "Quellabruf oder Datenprüfung fehlgeschlagen"
+  ]
 }

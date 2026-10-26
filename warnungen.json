@@ -1,7 +1,8 @@
 {
-  "status": "ok",
-  "fetchedAt": "2026-10-26T05:19:59.887Z",
-  "lastAttemptAt": "2026-10-26T05:19:59.395Z",
+  "status": "error",
+  "fetchedAt": "2026-10-26T11:20:23.391Z",
+  "lastAttemptAt": "2026-10-26T11:20:23.391Z",
   "lastSuccessfulAt": "2026-10-26T05:19:59.887Z",
-  "items": []
+  "items": [],
+  "error": "Quellabruf oder Datenprüfung fehlgeschlagen"
 }

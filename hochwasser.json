@@ -1,7 +1,7 @@
 {
-  "status": "ok",
-  "fetchedAt": "2026-10-26T05:19:59.984Z",
-  "lastAttemptAt": "2026-10-26T05:19:59.887Z",
+  "status": "error",
+  "fetchedAt": "2026-10-26T11:20:23.963Z",
+  "lastAttemptAt": "2026-10-26T11:20:23.963Z",
   "lastSuccessfulAt": "2026-10-26T05:19:59.984Z",
   "items": [
     {
@@ -37,5 +37,6 @@
         "de": "Schleswig-Holstein Hochwasser-Sturmflut-Information"
       }
     }
-  ]
+  ],
+  "error": "Quellabruf oder Datenprüfung fehlgeschlagen"
 }

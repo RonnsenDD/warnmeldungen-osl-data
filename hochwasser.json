@@ -1,8 +1,8 @@
 {
   "status": "ok",
-  "fetchedAt": "2026-10-27T06:12:38.414Z",
-  "lastAttemptAt": "2026-10-27T06:12:38.297Z",
-  "lastSuccessfulAt": "2026-10-27T06:12:38.414Z",
+  "fetchedAt": "2026-10-27T12:23:38.397Z",
+  "lastAttemptAt": "2026-10-27T12:23:38.278Z",
+  "lastSuccessfulAt": "2026-10-27T12:23:38.397Z",
   "items": [
     {
       "id": "lhp.LHP.ST.cate476896af9b6f138b2e5a53d2f4bdfc6",
@@ -13,17 +13,6 @@
       "type": "Alert",
       "i18nTitle": {
         "de": "Hochwasser Vorwarnung"
-      }
-    },
-    {
-      "id": "lhp.LHP.SH.sh11793031650",
-      "version": 21,
-      "startDate": "2026-10-26T17:20:00+01:00",
-      "severity": "Moderate",
-      "urgency": "Immediate",
-      "type": "Update",
-      "i18nTitle": {
-        "de": "Schleswig-Holstein Hochwasser-Sturmflut-Information"
       }
     }
   ]

@@ -1,0 +1,37 @@
+name: Cloudflare scheduler validation
+
+on:
+  pull_request:
+    paths:
+      - "cloudflare/**"
+      - "tests/**"
+      - "bench/**"
+      - "wrangler.toml"
+      - ".github/workflows/test-cloudflare-scheduler.yml"
+  push:
+    branches:
+      - "codex/cloudflare-five-minute-scheduler"
+    paths:
+      - "cloudflare/**"
+      - "tests/**"
+      - "bench/**"
+      - "wrangler.toml"
+      - ".github/workflows/test-cloudflare-scheduler.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Syntax check
+        run: node --check cloudflare/worker.mjs
+      - name: Regression tests
+        run: node --test tests/*.test.js tests/*.test.mjs
+      - name: Synthetic CPU benchmark
+        run: node bench/worker-cpu-benchmark.mjs

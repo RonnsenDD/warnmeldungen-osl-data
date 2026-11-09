@@ -1,19 +1,7 @@
 {
   "status": "ok",
-  "fetchedAt": "2026-11-09T07:52:42.797Z",
-  "lastAttemptAt": "2026-11-09T07:52:42.642Z",
-  "lastSuccessfulAt": "2026-11-09T07:52:42.797Z",
-  "items": [
-    {
-      "id": "lhp.LHP.ST.cate476896af9b6f138b2e5a53d2f4bdfc6",
-      "version": 21,
-      "startDate": "2026-10-26T12:57:00+01:00",
-      "severity": "Unknown",
-      "urgency": "Future",
-      "type": "Alert",
-      "i18nTitle": {
-        "de": "Hochwasser Vorwarnung"
-      }
-    }
-  ]
+  "fetchedAt": "2026-11-09T18:21:11.986Z",
+  "lastAttemptAt": "2026-11-09T18:21:11.846Z",
+  "lastSuccessfulAt": "2026-11-09T18:21:11.986Z",
+  "items": []
 }

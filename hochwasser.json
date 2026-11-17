@@ -1,18 +1,65 @@
 {
   "status": "ok",
-  "fetchedAt": "2026-11-17T12:31:45.118Z",
-  "lastAttemptAt": "2026-11-17T12:31:44.950Z",
-  "lastSuccessfulAt": "2026-11-17T12:31:45.118Z",
+  "fetchedAt": "2026-11-17T21:17:51.465Z",
+  "lastAttemptAt": "2026-11-17T21:17:51.372Z",
+  "lastSuccessfulAt": "2026-11-17T21:17:51.465Z",
   "items": [
     {
-      "id": "lhp.LHP.HE.411658",
+      "id": "lhp.LHP.ST.cat0248deefc7c241c2f99291060a4cdc82",
       "version": 21,
-      "startDate": "2026-11-17T10:30:00+01:00",
-      "severity": "Moderate",
-      "urgency": "Immediate",
+      "startDate": "2026-11-17T15:40:00+01:00",
+      "severity": "Unknown",
+      "urgency": "Future",
       "type": "Alert",
       "i18nTitle": {
-        "de": "Warnung vor Hochwasser"
+        "de": "Hochwasser Vorwarnung"
+      }
+    },
+    {
+      "id": "lhp.LHP.ST.ext87d9d965ef66c64e5705e0091610148c",
+      "version": 21,
+      "startDate": "2026-11-17T15:54:00+01:00",
+      "severity": "Unknown",
+      "urgency": "Future",
+      "type": "Alert",
+      "i18nTitle": {
+        "de": "Hochwasser Vorwarnung"
+      }
+    },
+    {
+      "id": "lhp.LHP.BY.16629_677",
+      "version": 21,
+      "startDate": "2026-11-17T16:00:00+01:00",
+      "expiresDate": "2026-11-19T10:00:00+01:00",
+      "severity": "Unknown",
+      "urgency": "Future",
+      "type": "Alert",
+      "i18nTitle": {
+        "de": "Vorwarnung Hochwassergefahr"
+      }
+    },
+    {
+      "id": "lhp.LHP.BY.16630_478",
+      "version": 21,
+      "startDate": "2026-11-17T17:00:00+01:00",
+      "expiresDate": "2026-11-18T17:00:00+01:00",
+      "severity": "Unknown",
+      "urgency": "Future",
+      "type": "Alert",
+      "i18nTitle": {
+        "de": "Vorwarnung Hochwassergefahr"
+      }
+    },
+    {
+      "id": "lhp.LHP.BY.16631_477",
+      "version": 21,
+      "startDate": "2026-11-17T17:00:00+01:00",
+      "expiresDate": "2026-11-18T08:00:00+01:00",
+      "severity": "Unknown",
+      "urgency": "Future",
+      "type": "Alert",
+      "i18nTitle": {
+        "de": "Vorwarnung Hochwassergefahr"
       }
     }
   ]

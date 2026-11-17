@@ -1,7 +1,43 @@
 {
   "status": "ok",
-  "fetchedAt": "2026-11-17T12:31:44.949Z",
-  "lastAttemptAt": "2026-11-17T12:31:43.958Z",
-  "lastSuccessfulAt": "2026-11-17T12:31:44.949Z",
-  "items": []
+  "fetchedAt": "2026-11-17T21:17:51.372Z",
+  "lastAttemptAt": "2026-11-17T21:17:50.891Z",
+  "lastSuccessfulAt": "2026-11-17T21:17:51.372Z",
+  "items": [
+    {
+      "id": "dwd.2.49.0.0.276.0.DWD.PVW.1794942300000.68809db8-243a-46bf-8b16-16722e7bc9be.MUL",
+      "payload": {
+        "version": 21,
+        "type": "ALERT",
+        "id": "dwd.2.49.0.0.276.0.DWD.PVW.1794942300000.68809db8-243a-46bf-8b16-16722e7bc9be.MUL",
+        "hash": "20ed90ecd654f1825fe0add699e8762cbdfc7fa90422e8227d16de5d9c01e128",
+        "data": {
+          "headline": "Amtliche WARNUNG vor STURMBÖEN",
+          "provider": "DWD",
+          "severity": "Moderate",
+          "urgency": "Immediate",
+          "msgType": "Alert",
+          "area": {
+            "type": "ZGEM",
+            "data": "2080+277,2359+5,2366,2368+1,2371+88,2461,2463,2465+35,2510+2,2582+52,2638+10,2670+5,2677+1,2680+1,2694+13,2825+38,2869+1,2873+3,2878+364,7097,7104,7191,7194+6,7215,7217+6,7225+6,7233+70,9695,9697,9701+1,9846+52,9901+3,9907+22,9931+24"
+          },
+          "valid": true
+        }
+      },
+      "i18nTitle": {
+        "de": "Amtliche WARNUNG vor STURMBÖEN",
+        "en": "Official WARNING of GALE-FORCE GUSTS",
+        "ar": "تحذير رسمي من هبوب عواصف",
+        "es": "AVISO oficial de TURBONADA",
+        "fr": "ALERTE officielle INTEMPÉRIES PRONONCÉES pour RAFALES DE FORCE FORT COUP DE VENT",
+        "pl": "Oficjalne OSTRZEŻENIE METEOROLOGICZNE (2. STOPNIA) przed WICHURAMI",
+        "ru": "Официальное предупреждение о значительных погодных явлениях: Шквалы штормового ветра",
+        "tr": "FIRTINA ESİNTİLERİNE karşı resmi UYARI"
+      },
+      "sent": "2026-11-17T20:04:36+01:00",
+      "onset": "2026-11-18T13:00:00+01:00",
+      "expires": "2026-11-18T21:00:00+01:00",
+      "effective": "2026-11-17T20:05:00+01:00"
+    }
+  ]
 }

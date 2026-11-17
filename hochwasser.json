@@ -1,7 +1,19 @@
 {
   "status": "ok",
-  "fetchedAt": "2026-11-17T03:42:51.245Z",
-  "lastAttemptAt": "2026-11-17T03:42:51.142Z",
-  "lastSuccessfulAt": "2026-11-17T03:42:51.245Z",
-  "items": []
+  "fetchedAt": "2026-11-17T12:31:45.118Z",
+  "lastAttemptAt": "2026-11-17T12:31:44.950Z",
+  "lastSuccessfulAt": "2026-11-17T12:31:45.118Z",
+  "items": [
+    {
+      "id": "lhp.LHP.HE.411658",
+      "version": 21,
+      "startDate": "2026-11-17T10:30:00+01:00",
+      "severity": "Moderate",
+      "urgency": "Immediate",
+      "type": "Alert",
+      "i18nTitle": {
+        "de": "Warnung vor Hochwasser"
+      }
+    }
+  ]
 }

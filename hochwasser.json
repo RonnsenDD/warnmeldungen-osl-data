@@ -1,8 +1,8 @@
 {
   "status": "ok",
-  "fetchedAt": "2026-11-18T02:58:00.263Z",
-  "lastAttemptAt": "2026-11-18T02:58:00.157Z",
-  "lastSuccessfulAt": "2026-11-18T02:58:00.263Z",
+  "fetchedAt": "2026-11-18T11:28:37.635Z",
+  "lastAttemptAt": "2026-11-18T11:28:37.520Z",
+  "lastSuccessfulAt": "2026-11-18T11:28:37.635Z",
   "items": [
     {
       "id": "lhp.LHP.ST.cat0248deefc7c241c2f99291060a4cdc82",
@@ -27,18 +27,6 @@
       }
     },
     {
-      "id": "lhp.LHP.BY.16629_677",
-      "version": 21,
-      "startDate": "2026-11-17T16:00:00+01:00",
-      "expiresDate": "2026-11-19T10:00:00+01:00",
-      "severity": "Unknown",
-      "urgency": "Future",
-      "type": "Alert",
-      "i18nTitle": {
-        "de": "Vorwarnung Hochwassergefahr"
-      }
-    },
-    {
       "id": "lhp.LHP.BY.16630_478",
       "version": 21,
       "startDate": "2026-11-17T17:00:00+01:00",
@@ -51,15 +39,27 @@
       }
     },
     {
-      "id": "lhp.LHP.BY.16631_477",
+      "id": "lhp.LHP.BY.16632_477",
       "version": 21,
-      "startDate": "2026-11-17T17:00:00+01:00",
-      "expiresDate": "2026-11-18T08:00:00+01:00",
+      "startDate": "2026-11-18T07:30:00+01:00",
+      "expiresDate": "2026-11-19T09:00:00+01:00",
       "severity": "Unknown",
       "urgency": "Future",
-      "type": "Alert",
+      "type": "Update",
       "i18nTitle": {
         "de": "Vorwarnung Hochwassergefahr"
+      }
+    },
+    {
+      "id": "lhp.LHP.BY.16633_677",
+      "version": 21,
+      "startDate": "2026-11-18T10:00:00+01:00",
+      "expiresDate": "2026-11-19T10:00:00+01:00",
+      "severity": "Unknown",
+      "urgency": "Past",
+      "type": "Cancel",
+      "i18nTitle": {
+        "de": "Entwarnung"
       }
     }
   ]

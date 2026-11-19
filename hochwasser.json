@@ -1,8 +1,8 @@
 {
   "status": "ok",
-  "fetchedAt": "2026-11-19T01:27:16.443Z",
-  "lastAttemptAt": "2026-11-19T01:27:16.347Z",
-  "lastSuccessfulAt": "2026-11-19T01:27:16.443Z",
+  "fetchedAt": "2026-11-19T09:24:54.189Z",
+  "lastAttemptAt": "2026-11-19T09:24:54.015Z",
+  "lastSuccessfulAt": "2026-11-19T09:24:54.189Z",
   "items": [
     {
       "id": "lhp.LHP.ST.cat0248deefc7c241c2f99291060a4cdc82",
@@ -27,10 +27,10 @@
       }
     },
     {
-      "id": "lhp.LHP.BY.16632_477",
+      "id": "lhp.LHP.BY.16634_478",
       "version": 21,
-      "startDate": "2026-11-18T07:30:00+01:00",
-      "expiresDate": "2026-11-19T09:00:00+01:00",
+      "startDate": "2026-11-18T14:00:00+01:00",
+      "expiresDate": "2026-11-19T17:00:00+01:00",
       "severity": "Unknown",
       "urgency": "Future",
       "type": "Update",
@@ -39,22 +39,34 @@
       }
     },
     {
-      "id": "lhp.LHP.BY.16633_677",
+      "id": "lhp.LHP.BY.16635_472",
       "version": 21,
-      "startDate": "2026-11-18T10:00:00+01:00",
-      "expiresDate": "2026-11-19T10:00:00+01:00",
+      "startDate": "2026-11-19T06:45:00+01:00",
+      "expiresDate": "2026-11-20T20:00:00+01:00",
       "severity": "Unknown",
-      "urgency": "Past",
-      "type": "Cancel",
+      "urgency": "Future",
+      "type": "Alert",
       "i18nTitle": {
-        "de": "Entwarnung"
+        "de": "Vorwarnung Hochwassergefahr"
       }
     },
     {
-      "id": "lhp.LHP.BY.16634_478",
+      "id": "lhp.LHP.BY.16635_479",
       "version": 21,
-      "startDate": "2026-11-18T14:00:00+01:00",
-      "expiresDate": "2026-11-19T17:00:00+01:00",
+      "startDate": "2026-11-19T06:45:00+01:00",
+      "expiresDate": "2026-11-20T20:00:00+01:00",
+      "severity": "Unknown",
+      "urgency": "Future",
+      "type": "Alert",
+      "i18nTitle": {
+        "de": "Vorwarnung Hochwassergefahr"
+      }
+    },
+    {
+      "id": "lhp.LHP.BY.16635_477",
+      "version": 21,
+      "startDate": "2026-11-19T06:45:00+01:00",
+      "expiresDate": "2026-11-20T20:00:00+01:00",
       "severity": "Unknown",
       "urgency": "Future",
       "type": "Update",

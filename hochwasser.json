@@ -1,8 +1,8 @@
 {
   "status": "ok",
-  "fetchedAt": "2026-11-19T09:24:54.189Z",
-  "lastAttemptAt": "2026-11-19T09:24:54.015Z",
-  "lastSuccessfulAt": "2026-11-19T09:24:54.189Z",
+  "fetchedAt": "2026-11-19T18:32:29.835Z",
+  "lastAttemptAt": "2026-11-19T18:32:29.738Z",
+  "lastSuccessfulAt": "2026-11-19T18:32:29.835Z",
   "items": [
     {
       "id": "lhp.LHP.ST.cat0248deefc7c241c2f99291060a4cdc82",
@@ -24,18 +24,6 @@
       "type": "Alert",
       "i18nTitle": {
         "de": "Hochwasser Vorwarnung"
-      }
-    },
-    {
-      "id": "lhp.LHP.BY.16634_478",
-      "version": 21,
-      "startDate": "2026-11-18T14:00:00+01:00",
-      "expiresDate": "2026-11-19T17:00:00+01:00",
-      "severity": "Unknown",
-      "urgency": "Future",
-      "type": "Update",
-      "i18nTitle": {
-        "de": "Vorwarnung Hochwassergefahr"
       }
     },
     {
@@ -72,6 +60,76 @@
       "type": "Update",
       "i18nTitle": {
         "de": "Vorwarnung Hochwassergefahr"
+      }
+    },
+    {
+      "id": "lhp.LHP.TH.2201",
+      "version": 21,
+      "startDate": "2026-11-19T14:00:00+01:00",
+      "severity": "Unknown",
+      "urgency": "Future",
+      "type": "Alert",
+      "i18nTitle": {
+        "de": "Hochwasservorwarnung"
+      }
+    },
+    {
+      "id": "lhp.LHP.RP.rp_17_20261119145208",
+      "version": 21,
+      "startDate": "2026-11-19T15:52:00+01:00",
+      "severity": "Moderate",
+      "urgency": "Immediate",
+      "type": "Alert",
+      "i18nTitle": {
+        "de": "Amtliche HOCHWASSERINFO für Our, Prüm und Nims"
+      }
+    },
+    {
+      "id": "lhp.LHP.BY.16640_471",
+      "version": 21,
+      "startDate": "2026-11-19T15:00:00+01:00",
+      "expiresDate": "2026-11-20T17:00:00+01:00",
+      "severity": "Moderate",
+      "urgency": "Immediate",
+      "type": "Update",
+      "i18nTitle": {
+        "de": "Hochwasserwarnung vor Ausuferungen und Überschwemmungen"
+      }
+    },
+    {
+      "id": "lhp.LHP.BY.16641_478",
+      "version": 21,
+      "startDate": "2026-11-19T15:00:00+01:00",
+      "expiresDate": "2026-11-20T17:00:00+01:00",
+      "severity": "Severe",
+      "urgency": "Immediate",
+      "type": "Update",
+      "i18nTitle": {
+        "de": "Hochwasserwarnung vor Überschwemmungsgefahr für bebaute Gebiete"
+      }
+    },
+    {
+      "id": "lhp.LHP.BY.16642_473",
+      "version": 21,
+      "startDate": "2026-11-19T15:00:00+01:00",
+      "expiresDate": "2026-11-20T17:00:00+01:00",
+      "severity": "Severe",
+      "urgency": "Immediate",
+      "type": "Update",
+      "i18nTitle": {
+        "de": "Hochwasserwarnung vor Überschwemmungsgefahr für bebaute Gebiete"
+      }
+    },
+    {
+      "id": "lhp.LHP.BY.16643_476",
+      "version": 21,
+      "startDate": "2026-11-19T15:00:00+01:00",
+      "expiresDate": "2026-11-20T17:00:00+01:00",
+      "severity": "Severe",
+      "urgency": "Immediate",
+      "type": "Update",
+      "i18nTitle": {
+        "de": "Hochwasserwarnung vor Überschwemmungsgefahr für bebaute Gebiete"
       }
     }
   ]

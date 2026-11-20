@@ -1,8 +1,8 @@
 {
   "status": "ok",
-  "fetchedAt": "2026-11-20T16:59:16.100Z",
-  "lastAttemptAt": "2026-11-20T16:59:15.958Z",
-  "lastSuccessfulAt": "2026-11-20T16:59:16.100Z",
+  "fetchedAt": "2026-11-20T23:02:02.730Z",
+  "lastAttemptAt": "2026-11-20T23:02:02.629Z",
+  "lastSuccessfulAt": "2026-11-20T23:02:02.730Z",
   "items": [
     {
       "id": "lhp.LHP.RP.rp_17_20261120055245",
@@ -50,54 +50,6 @@
       "type": "Alert",
       "i18nTitle": {
         "de": "Vorwarnung Hochwassergefahr"
-      }
-    },
-    {
-      "id": "lhp.LHP.BY.16647_471",
-      "version": 21,
-      "startDate": "2026-11-20T09:00:00+01:00",
-      "expiresDate": "2026-11-21T20:00:00+01:00",
-      "severity": "Moderate",
-      "urgency": "Immediate",
-      "type": "Update",
-      "i18nTitle": {
-        "de": "Hochwasserwarnung vor Ausuferungen und Überschwemmungen"
-      }
-    },
-    {
-      "id": "lhp.LHP.BY.16648_478",
-      "version": 21,
-      "startDate": "2026-11-20T09:00:00+01:00",
-      "expiresDate": "2026-11-21T20:00:00+01:00",
-      "severity": "Severe",
-      "urgency": "Immediate",
-      "type": "Update",
-      "i18nTitle": {
-        "de": "Hochwasserwarnung vor Überschwemmungsgefahr für bebaute Gebiete"
-      }
-    },
-    {
-      "id": "lhp.LHP.BY.16649_473",
-      "version": 21,
-      "startDate": "2026-11-20T09:00:00+01:00",
-      "expiresDate": "2026-11-21T20:00:00+01:00",
-      "severity": "Severe",
-      "urgency": "Immediate",
-      "type": "Update",
-      "i18nTitle": {
-        "de": "Hochwasserwarnung vor Überschwemmungsgefahr für bebaute Gebiete"
-      }
-    },
-    {
-      "id": "lhp.LHP.BY.16650_476",
-      "version": 21,
-      "startDate": "2026-11-20T09:00:00+01:00",
-      "expiresDate": "2026-11-21T20:00:00+01:00",
-      "severity": "Severe",
-      "urgency": "Immediate",
-      "type": "Update",
-      "i18nTitle": {
-        "de": "Hochwasserwarnung vor Überschwemmungsgefahr für bebaute Gebiete"
       }
     },
     {
@@ -213,6 +165,110 @@
       "type": "Alert",
       "i18nTitle": {
         "de": "Warnung: Hochwasser"
+      }
+    },
+    {
+      "id": "lhp.LHP.BY.16655_473",
+      "version": 21,
+      "startDate": "2026-11-20T18:00:00+01:00",
+      "expiresDate": "2026-11-21T18:00:00+01:00",
+      "severity": "Severe",
+      "urgency": "Immediate",
+      "type": "Update",
+      "i18nTitle": {
+        "de": "Hochwasserwarnung vor Überschwemmungsgefahr für bebaute Gebiete"
+      }
+    },
+    {
+      "id": "lhp.LHP.BY.16656_471",
+      "version": 21,
+      "startDate": "2026-11-20T18:00:00+01:00",
+      "expiresDate": "2026-11-21T18:00:00+01:00",
+      "severity": "Severe",
+      "urgency": "Immediate",
+      "type": "Update",
+      "i18nTitle": {
+        "de": "Hochwasserwarnung vor Überschwemmungsgefahr für bebaute Gebiete"
+      }
+    },
+    {
+      "id": "lhp.LHP.BY.16657_478",
+      "version": 21,
+      "startDate": "2026-11-20T18:00:00+01:00",
+      "expiresDate": "2026-11-21T18:00:00+01:00",
+      "severity": "Severe",
+      "urgency": "Immediate",
+      "type": "Update",
+      "i18nTitle": {
+        "de": "Hochwasserwarnung vor Überschwemmungsgefahr für bebaute Gebiete"
+      }
+    },
+    {
+      "id": "lhp.LHP.BY.16658_476",
+      "version": 21,
+      "startDate": "2026-11-20T18:00:00+01:00",
+      "expiresDate": "2026-11-21T18:00:00+01:00",
+      "severity": "Severe",
+      "urgency": "Immediate",
+      "type": "Update",
+      "i18nTitle": {
+        "de": "Hochwasserwarnung vor Überschwemmungsgefahr für bebaute Gebiete"
+      }
+    },
+    {
+      "id": "lhp.LHP.BY.16659_474",
+      "version": 21,
+      "startDate": "2026-11-20T18:00:00+01:00",
+      "expiresDate": "2026-11-21T18:00:00+01:00",
+      "severity": "Unknown",
+      "urgency": "Future",
+      "type": "Alert",
+      "i18nTitle": {
+        "de": "Vorwarnung Hochwassergefahr"
+      }
+    },
+    {
+      "id": "lhp.LHP.HE.149012",
+      "version": 21,
+      "startDate": "2026-11-20T19:44:00+01:00",
+      "severity": "Moderate",
+      "urgency": "Immediate",
+      "type": "Alert",
+      "i18nTitle": {
+        "de": "Warnung vor Hochwasser"
+      }
+    },
+    {
+      "id": "lhp.LHP.NW.nw38957",
+      "version": 21,
+      "startDate": "2026-11-20T19:40:00+01:00",
+      "severity": "Moderate",
+      "urgency": "Immediate",
+      "type": "Alert",
+      "i18nTitle": {
+        "de": "Warnung: Hochwasser"
+      }
+    },
+    {
+      "id": "lhp.LHP.HE.622905",
+      "version": 21,
+      "startDate": "2026-11-20T20:59:00+01:00",
+      "severity": "Moderate",
+      "urgency": "Immediate",
+      "type": "Alert",
+      "i18nTitle": {
+        "de": "Warnung vor Hochwasser"
+      }
+    },
+    {
+      "id": "lhp.LHP.HE.98166",
+      "version": 21,
+      "startDate": "2026-11-20T21:44:00+01:00",
+      "severity": "Moderate",
+      "urgency": "Immediate",
+      "type": "Alert",
+      "i18nTitle": {
+        "de": "Warnung vor Hochwasser"
       }
     }
   ]

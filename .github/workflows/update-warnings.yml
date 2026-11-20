@@ -25,7 +25,7 @@ jobs:
           node-version: "22"
 
       - name: Feed-Regressionstests
-        run: node --test tests/*.test.js
+        run: node --test tests/*.test.js tests/*.test.mjs
 
       - name: Daten abrufen
         id: fetch

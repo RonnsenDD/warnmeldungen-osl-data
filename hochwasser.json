@@ -1,8 +1,8 @@
 {
   "status": "ok",
-  "fetchedAt": "2026-11-20T23:02:02.730Z",
-  "lastAttemptAt": "2026-11-20T23:02:02.629Z",
-  "lastSuccessfulAt": "2026-11-20T23:02:02.730Z",
+  "fetchedAt": "2026-11-21T03:54:52.871Z",
+  "lastAttemptAt": "2026-11-21T03:54:52.735Z",
+  "lastSuccessfulAt": "2026-11-21T03:54:52.871Z",
   "items": [
     {
       "id": "lhp.LHP.RP.rp_17_20261120055245",
@@ -228,17 +228,6 @@
       }
     },
     {
-      "id": "lhp.LHP.HE.149012",
-      "version": 21,
-      "startDate": "2026-11-20T19:44:00+01:00",
-      "severity": "Moderate",
-      "urgency": "Immediate",
-      "type": "Alert",
-      "i18nTitle": {
-        "de": "Warnung vor Hochwasser"
-      }
-    },
-    {
       "id": "lhp.LHP.NW.nw38957",
       "version": 21,
       "startDate": "2026-11-20T19:40:00+01:00",
@@ -269,6 +258,30 @@
       "type": "Alert",
       "i18nTitle": {
         "de": "Warnung vor Hochwasser"
+      }
+    },
+    {
+      "id": "lhp.LHP.BY.16660_374",
+      "version": 21,
+      "startDate": "2026-11-21T00:00:00+01:00",
+      "expiresDate": "2026-11-22T00:00:00+01:00",
+      "severity": "Moderate",
+      "urgency": "Immediate",
+      "type": "Alert",
+      "i18nTitle": {
+        "de": "Hochwasserwarnung vor Ausuferungen und Überschwemmungen"
+      }
+    },
+    {
+      "id": "lhp.LHP.BY.16661_376",
+      "version": 21,
+      "startDate": "2026-11-21T00:00:00+01:00",
+      "expiresDate": "2026-11-22T00:00:00+01:00",
+      "severity": "Unknown",
+      "urgency": "Past",
+      "type": "Cancel",
+      "i18nTitle": {
+        "de": "Entwarnung"
       }
     }
   ]

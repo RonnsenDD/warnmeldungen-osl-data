@@ -1,43 +1,7 @@
 {
   "status": "ok",
-  "fetchedAt": "2026-11-21T03:54:52.735Z",
-  "lastAttemptAt": "2026-11-21T03:54:51.919Z",
-  "lastSuccessfulAt": "2026-11-21T03:54:52.735Z",
-  "items": [
-    {
-      "id": "dwd.2.49.0.0.276.0.DWD.PVW.1795197420000.9f8c4ce0-de1f-4604-b99f-9bf48f9e6fbc.MUL",
-      "payload": {
-        "version": 21,
-        "type": "ALERT",
-        "id": "dwd.2.49.0.0.276.0.DWD.PVW.1795197420000.9f8c4ce0-de1f-4604-b99f-9bf48f9e6fbc.MUL",
-        "hash": "b0f9e1972cc19973a5fb8801b502c5f0a9c51ad4d9a372e85c25db63edcbeb86",
-        "data": {
-          "headline": "Amtliche WARNUNG vor MARKANTER GLÄTTE",
-          "provider": "DWD",
-          "severity": "Moderate",
-          "urgency": "Immediate",
-          "msgType": "Alert",
-          "area": {
-            "type": "ZGEM",
-            "data": "2864+7,2877+3,2897+14,2914,3131,6439,6442,6453+5,6460,6512,6514+2,6518+71,6767+6,6797+8,6807,6813+3,6818,6821+1,6824+157,6983+72,7074+1,7082+1,7088+5,7095,7106+23,7131,7134+49,7186+1,7201,7203,7211,9740+1,9748+1,9757+12,9771+43,9821+2,9830,9832+13,9877,9883+2,9933,9940+1,9943+2,9952,9955"
-          },
-          "valid": true
-        }
-      },
-      "i18nTitle": {
-        "de": "Amtliche WARNUNG vor MARKANTER GLÄTTE",
-        "en": "Official WARNING of SIGNIFICANT ICY SURFACES",
-        "ar": "تحذير رسمي من خطر كبير من الانزلاق",
-        "es": "AVISO oficial por MARCADAS SUPERFICIES RESBALADIZAS",
-        "fr": "ALERTE officielle d'INTEMPÉRIES pour VERGLAS MARQUÉ",
-        "pl": "Oficjalne OSTRZEŻENIE METEOROLOGICZNE (2. STOPNIA) przed ZNACZNYM OBLODZENIEM",
-        "ru": "Официальное метеорологическое предупреждение (уровень 2): Значительный Гололедица",
-        "tr": "BUZLU YÜZEYLERE karşı resmi UYARI"
-      },
-      "sent": "2026-11-20T18:56:45+01:00",
-      "onset": "2026-11-21T00:00:00+01:00",
-      "expires": "2026-11-21T09:00:00+01:00",
-      "effective": "2026-11-20T18:57:00+01:00"
-    }
-  ]
+  "fetchedAt": "2026-11-21T12:20:10.885Z",
+  "lastAttemptAt": "2026-11-21T12:20:09.457Z",
+  "lastSuccessfulAt": "2026-11-21T12:20:10.885Z",
+  "items": []
 }

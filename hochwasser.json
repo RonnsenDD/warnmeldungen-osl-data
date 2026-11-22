@@ -1,8 +1,8 @@
 {
   "status": "ok",
-  "fetchedAt": "2026-11-21T23:55:15.550Z",
-  "lastAttemptAt": "2026-11-21T23:55:15.430Z",
-  "lastSuccessfulAt": "2026-11-21T23:55:15.550Z",
+  "fetchedAt": "2026-11-22T06:06:04.639Z",
+  "lastAttemptAt": "2026-11-22T06:06:04.502Z",
+  "lastSuccessfulAt": "2026-11-22T06:06:04.639Z",
   "items": [
     {
       "id": "lhp.LHP.BY.16644_477",
@@ -14,18 +14,6 @@
       "type": "Update",
       "i18nTitle": {
         "de": "Hochwasserwarnung vor Ausuferungen und Überschwemmungen"
-      }
-    },
-    {
-      "id": "lhp.LHP.BY.16662_472",
-      "version": 21,
-      "startDate": "2026-11-21T05:00:00+01:00",
-      "expiresDate": "2026-11-22T05:00:00+01:00",
-      "severity": "Unknown",
-      "urgency": "Past",
-      "type": "Cancel",
-      "i18nTitle": {
-        "de": "Entwarnung"
       }
     },
     {

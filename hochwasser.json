@@ -1,21 +1,9 @@
 {
   "status": "ok",
-  "fetchedAt": "2026-11-23T09:12:41.372Z",
-  "lastAttemptAt": "2026-11-23T09:12:41.262Z",
-  "lastSuccessfulAt": "2026-11-23T09:12:41.372Z",
+  "fetchedAt": "2026-11-23T21:31:08.510Z",
+  "lastAttemptAt": "2026-11-23T21:31:08.417Z",
+  "lastSuccessfulAt": "2026-11-23T21:31:08.510Z",
   "items": [
-    {
-      "id": "lhp.LHP.BY.16675_477",
-      "version": 21,
-      "startDate": "2026-11-22T18:00:00+01:00",
-      "expiresDate": "2026-11-23T18:00:00+01:00",
-      "severity": "Unknown",
-      "urgency": "Past",
-      "type": "Cancel",
-      "i18nTitle": {
-        "de": "Entwarnung"
-      }
-    },
     {
       "id": "lhp.LHP.BY.16676_476",
       "version": 21,
@@ -62,6 +50,50 @@
       "type": "Update",
       "i18nTitle": {
         "de": "Hochwasserwarnung vor Ausuferungen und Überschwemmungen"
+      }
+    },
+    {
+      "id": "lhp.LHP.BB.23112026110849_02_L",
+      "version": 21,
+      "startDate": "2026-11-23T11:00:00+01:00",
+      "severity": "Unknown",
+      "urgency": "Future",
+      "type": "Alert",
+      "i18nTitle": {
+        "de": "Es liegt eine amtliche Hochwasserwarnung vor"
+      }
+    },
+    {
+      "id": "lhp.LHP.BB.23112026110849_24",
+      "version": 21,
+      "startDate": "2026-11-23T11:00:00+01:00",
+      "severity": "Unknown",
+      "urgency": "Future",
+      "type": "Alert",
+      "i18nTitle": {
+        "de": "Es liegt eine amtliche Hochwasserwarnung vor"
+      }
+    },
+    {
+      "id": "lhp.LHP.BB.23112026110849_90_L",
+      "version": 21,
+      "startDate": "2026-11-23T11:00:00+01:00",
+      "severity": "Unknown",
+      "urgency": "Future",
+      "type": "Alert",
+      "i18nTitle": {
+        "de": "Es liegt eine amtliche Hochwasserwarnung vor"
+      }
+    },
+    {
+      "id": "lhp.LHP.BB.23112026110849_91_L",
+      "version": 21,
+      "startDate": "2026-11-23T11:00:00+01:00",
+      "severity": "Unknown",
+      "urgency": "Future",
+      "type": "Alert",
+      "i18nTitle": {
+        "de": "Es liegt eine amtliche Hochwasserwarnung vor"
       }
     }
   ]

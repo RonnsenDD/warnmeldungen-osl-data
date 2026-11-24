@@ -1,99 +1,19 @@
 {
   "status": "ok",
-  "fetchedAt": "2026-11-24T05:29:43.781Z",
-  "lastAttemptAt": "2026-11-24T05:29:43.679Z",
-  "lastSuccessfulAt": "2026-11-24T05:29:43.781Z",
+  "fetchedAt": "2026-11-24T16:18:37.336Z",
+  "lastAttemptAt": "2026-11-24T16:18:37.223Z",
+  "lastSuccessfulAt": "2026-11-24T16:18:37.336Z",
   "items": [
     {
-      "id": "lhp.LHP.BY.16676_476",
-      "version": 21,
-      "startDate": "2026-11-23T07:00:00+01:00",
-      "expiresDate": "2026-11-24T07:00:00+01:00",
+      "id": "lhp.LHP.BY.16680_471",
+      "version": 22,
+      "startDate": "2026-11-24T10:00:00+01:00",
+      "expiresDate": "2026-11-25T10:00:00+01:00",
       "severity": "Unknown",
       "urgency": "Past",
       "type": "Cancel",
       "i18nTitle": {
         "de": "Entwarnung"
-      }
-    },
-    {
-      "id": "lhp.LHP.BY.16677_473",
-      "version": 21,
-      "startDate": "2026-11-23T07:00:00+01:00",
-      "expiresDate": "2026-11-24T07:00:00+01:00",
-      "severity": "Unknown",
-      "urgency": "Past",
-      "type": "Cancel",
-      "i18nTitle": {
-        "de": "Entwarnung"
-      }
-    },
-    {
-      "id": "lhp.LHP.BY.16678_478",
-      "version": 21,
-      "startDate": "2026-11-23T07:00:00+01:00",
-      "expiresDate": "2026-11-24T07:00:00+01:00",
-      "severity": "Unknown",
-      "urgency": "Past",
-      "type": "Cancel",
-      "i18nTitle": {
-        "de": "Entwarnung"
-      }
-    },
-    {
-      "id": "lhp.LHP.BY.16679_471",
-      "version": 21,
-      "startDate": "2026-11-23T07:00:00+01:00",
-      "expiresDate": "2026-11-24T12:00:00+01:00",
-      "severity": "Moderate",
-      "urgency": "Immediate",
-      "type": "Update",
-      "i18nTitle": {
-        "de": "Hochwasserwarnung vor Ausuferungen und Überschwemmungen"
-      }
-    },
-    {
-      "id": "lhp.LHP.BB.23112026110849_02_L",
-      "version": 21,
-      "startDate": "2026-11-23T11:00:00+01:00",
-      "severity": "Unknown",
-      "urgency": "Future",
-      "type": "Alert",
-      "i18nTitle": {
-        "de": "Es liegt eine amtliche Hochwasserwarnung vor"
-      }
-    },
-    {
-      "id": "lhp.LHP.BB.23112026110849_24",
-      "version": 21,
-      "startDate": "2026-11-23T11:00:00+01:00",
-      "severity": "Unknown",
-      "urgency": "Future",
-      "type": "Alert",
-      "i18nTitle": {
-        "de": "Es liegt eine amtliche Hochwasserwarnung vor"
-      }
-    },
-    {
-      "id": "lhp.LHP.BB.23112026110849_90_L",
-      "version": 21,
-      "startDate": "2026-11-23T11:00:00+01:00",
-      "severity": "Unknown",
-      "urgency": "Future",
-      "type": "Alert",
-      "i18nTitle": {
-        "de": "Es liegt eine amtliche Hochwasserwarnung vor"
-      }
-    },
-    {
-      "id": "lhp.LHP.BB.23112026110849_91_L",
-      "version": 21,
-      "startDate": "2026-11-23T11:00:00+01:00",
-      "severity": "Unknown",
-      "urgency": "Future",
-      "type": "Alert",
-      "i18nTitle": {
-        "de": "Es liegt eine amtliche Hochwasserwarnung vor"
       }
     }
   ]

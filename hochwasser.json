@@ -1,20 +1,7 @@
 {
   "status": "ok",
-  "fetchedAt": "2026-11-25T00:55:52.150Z",
-  "lastAttemptAt": "2026-11-25T00:55:51.999Z",
-  "lastSuccessfulAt": "2026-11-25T00:55:52.150Z",
-  "items": [
-    {
-      "id": "lhp.LHP.BY.16680_471",
-      "version": 22,
-      "startDate": "2026-11-24T10:00:00+01:00",
-      "expiresDate": "2026-11-25T10:00:00+01:00",
-      "severity": "Unknown",
-      "urgency": "Past",
-      "type": "Cancel",
-      "i18nTitle": {
-        "de": "Entwarnung"
-      }
-    }
-  ]
+  "fetchedAt": "2026-11-25T09:43:33.759Z",
+  "lastAttemptAt": "2026-11-25T09:43:33.635Z",
+  "lastSuccessfulAt": "2026-11-25T09:43:33.759Z",
+  "items": []
 }
